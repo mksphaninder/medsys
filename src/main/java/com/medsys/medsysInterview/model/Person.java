@@ -1,20 +1,24 @@
 package com.medsys.medsysInterview.model;
 
+import java.util.Date;
+
 public class Person {
+	private String fname;
 	private String lname;
+	private Date dob;
 	private String addr1;
 	private String addr2;
 	private String city;
 	private String state;
-	private String fname;
 	int zip;
 	
 
-	public Person(String fname, String lname, String addr1, String addr2, String city, String state, int zip) {
+	public Person(String fname, String lname, Date dob, String addr1, String addr2, String city, String state, int zip) {
 		// TODO Auto-generated constructor stub
 		super();
 		this.fname = fname;
 		this.lname = lname;
+		this.dob = dob;
 		this.addr1 = addr1;
 		this.addr2 = addr2;
 		this.city = city;
@@ -28,6 +32,13 @@ public class Person {
 	}
 	public void setLname(String lname) {
 		this.lname = lname;
+	}
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
 	}
 	public String getAddr1() {
 		return addr1;
