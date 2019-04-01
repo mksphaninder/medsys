@@ -3,6 +3,7 @@ package com.medsys.medsysInterview.model;
 import java.util.Date;
 
 public class Person {
+	private Integer id;
 	private String fname;
 	private String lname;
 	private Date dob;
@@ -13,9 +14,10 @@ public class Person {
 	int zip;
 	
 
-	public Person(String fname, String lname, Date dob, String addr1, String addr2, String city, String state, int zip) {
+	public Person(Integer id, String fname, String lname, Date dob, String addr1, String addr2, String city, String state, int zip) {
 		// TODO Auto-generated constructor stub
 		super();
+		this.id = id;
 		this.fname = fname;
 		this.lname = lname;
 		this.dob = dob;
@@ -27,9 +29,19 @@ public class Person {
 	}
 
 	//Getters & setters
+	
+	
+	public int getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getLname() {
 		return lname;
 	}
+
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
@@ -75,6 +87,12 @@ public class Person {
 	}
 	public void setZip(int zip) {
 		this.zip = zip;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id +", fname=" + fname + ", lname=" + lname + ", dob=" + dob + ", addr1=" + addr1 + ", addr2=" + addr2
+				+ ", city=" + city + ", state=" + state + ", zip=" + zip + "]";
 	}
 	
 	
